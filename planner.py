@@ -18,7 +18,7 @@ def fetch_hourly():
     params = {
         "latitude": LAT,
         "longitude": LON,
-        "hourly": "rain,precipitation_probability",
+        "hourly": "rain,precipitation_probability,temperature_2m",
         "timezone": TIMEZONE,
         "forecast_days": 1,
     }
@@ -36,10 +36,11 @@ def find_dry_hours(hourly):
     times = hourly["time"]
     rains = hourly["rain"]
     pops = hourly["precipitation_probability"]
+    temps_c = hourly["temperature_2m"]
 
     dry_hours = []
 
-    for t_str, rain, pop in zip(times, rains, pops):
+    for t_str, rain, pop, temp_c in zip(times, rains, pops, temps_c):
         dt = datetime.fromisoformat(t_str).replace(tzinfo=tz)
 
         # Only today
@@ -56,7 +57,13 @@ def find_dry_hours(hourly):
 
         # Dry criteria
         if rain <= MAX_RAIN_MM and pop <= MAX_POP:
-            dry_hours.append(dt.strftime("%H:%M"))
+            temp_f = temp_c * 9/5 + 32
+            dry_hours.append({
+                "time": dt.strftime("%H:%M"),
+                "rain": rain,
+                "pop": pop,
+                "temp_f": round(temp_f)
+            })
 
     return dry_hours
 
@@ -92,14 +99,25 @@ def main():
     hourly = fetch_hourly()
     dry_hours = find_dry_hours(hourly)
 
+    # Convert to a simple list for state comparison
+    dry_hour_strings = [h["time"] for h in dry_hours]
+
     state = load_state()
     last = state.get("last_notified_hours", [])
 
     # 7:00 → always send summary
     if now.hour == 7:
-        msg = "Dry travel hours today:\n" + ", ".join(dry_hours) if dry_hours else "No dry hours today."
+        if dry_hours:
+            lines = [
+                f"{h['time']} — {h['temp_f']}°F"
+                for h in dry_hours
+            ]
+            msg = "Best dry travel hours today:\n" + "\n".join(lines)
+        else:
+            msg = "No dry travel hours today."
+
         notify(msg)
-        state["last_notified_hours"] = dry_hours
+        state["last_notified_hours"] = dry_hour_strings
         save_state(state)
         return
 
@@ -108,12 +126,16 @@ def main():
         return
 
     # During the day → only notify if changed
-    if dry_hours != last:
-        msg = "Updated dry travel hours:\n" + ", ".join(dry_hours) if dry_hours else "No remaining dry hours."
+    if dry_hour_strings != last:
+        if dry_hours:
+            lines = [
+                f"{h['time']} — {h['temp_f']}°F"
+                for h in dry_hours
+            ]
+            msg = "Updated dry travel hours:\n" + "\n".join(lines)
+        else:
+            msg = "No remaining dry hours."
+
         notify(msg)
-        state["last_notified_hours"] = dry_hours
+        state["last_notified_hours"] = dry_hour_strings
         save_state(state)
-
-
-if __name__ == "__main__":
-    main()
