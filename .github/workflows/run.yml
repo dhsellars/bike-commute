@@ -1,3 +1,6 @@
+# If you want state persistence, leave this enabled.
+# If you're using a fork or multiple users, comment this out.
+
 name: Bike Commute Planner
 
 on:
