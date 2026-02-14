@@ -1,24 +1,21 @@
 from datetime import time
+import os
+from dotenv import load_dotenv
 
-# --- LOCATION ---
-LAT = 48.6850
-LON = 9.0113
-TIMEZONE = "Europe/Berlin"
+load_dotenv()
 
-# --- COMMUTE WINDOW ---
-START_HOUR = 7
-END_HOUR   = 19
+LAT = float(os.getenv("LAT"))
+LON = float(os.getenv("LON"))
+TIMEZONE = os.getenv("TIMEZONE")
 
-# --- NOTIFICATION WINDOW ---
-NOTIFY_END_HOUR = 17  # no updates after 17:00
+START_HOUR = int(os.getenv("START_HOUR"))
+END_HOUR = int(os.getenv("END_HOUR"))
+NOTIFY_END_HOUR = int(os.getenv("NOTIFY_END_HOUR"))
 
-# --- DRY CRITERIA ---
-MAX_RAIN_MM = 0.0
-MAX_POP = 20
+MAX_RAIN_MM = float(os.getenv("MAX_RAIN_MM"))
+MAX_POP = int(os.getenv("MAX_POP"))
 
-# --- NTFY ---
-NTFY_TOPIC = "bike-commute-d-48_68-9_01"
+NTFY_TOPIC = os.getenv("NTFY_TOPIC")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
-# --- STATE FILE ---
 STATE_FILE = "state.json"
