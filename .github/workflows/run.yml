@@ -1,6 +1,3 @@
-# If you want state persistence, leave this enabled.
-# If you're using a fork or multiple users, comment this out.
-
 name: Bike Commute Planner
 
 on:
@@ -12,6 +9,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v4
 
@@ -19,7 +19,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install requests
+      - name: Install dependencies
+        run: pip install requests python-dotenv
 
       - name: Run planner
         run: python planner.py
