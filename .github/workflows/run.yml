@@ -36,6 +36,11 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add state_*.json
-          git commit -m "Update state" || echo "No changes"
-          git push
+          # Only add the file if it exists
+          if ls state_*.json 1> /dev/null 2>&1; then
+            git add state_*.json
+            git commit -m "Update state" || echo "No changes"
+            git push
+          else
+            echo "No state file yet, skipping commit"
+          fi
