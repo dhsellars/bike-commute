@@ -23,6 +23,13 @@ jobs:
         run: pip install requests
 
       - name: Run planner
+        env:
+          START_LAT: ${{ secrets.START_LAT }}
+          START_LON: ${{ secrets.START_LON }}
+          END_LAT: ${{ secrets.END_LAT }}
+          END_LON: ${{ secrets.END_LON }}
+          TIMEZONE: ${{ secrets.TIMEZONE }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python planner.py
 
       - name: Commit updated state
