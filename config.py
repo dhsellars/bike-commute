@@ -1,6 +1,6 @@
 import os
 
-# Secrets (from GitHub Actions)
+# Secrets (in GitHub Actions)
 START_LAT = float(os.environ["START_LAT"])
 START_LON = float(os.environ["START_LON"])
 END_LAT = float(os.environ["END_LAT"])
