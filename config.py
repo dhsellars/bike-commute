@@ -1,21 +1,22 @@
-from datetime import time
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+# Secrets (from GitHub Actions)
+START_LAT = float(os.environ["START_LAT"])
+START_LON = float(os.environ["START_LON"])
+END_LAT = float(os.environ["END_LAT"])
+END_LON = float(os.environ["END_LON"])
 
-LAT = float(os.getenv("LAT"))
-LON = float(os.getenv("LON"))
-TIMEZONE = os.getenv("TIMEZONE")
+TIMEZONE = os.environ["TIMEZONE"]
 
-START_HOUR = int(os.getenv("START_HOUR"))
-END_HOUR = int(os.getenv("END_HOUR"))
-NOTIFY_END_HOUR = int(os.getenv("NOTIFY_END_HOUR"))
-
-MAX_RAIN_MM = float(os.getenv("MAX_RAIN_MM"))
-MAX_POP = int(os.getenv("MAX_POP"))
-
-NTFY_TOPIC = os.getenv("NTFY_TOPIC")
+NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
+
+# Public config (safe to commit)
+START_HOUR = 6
+END_HOUR = 10
+NOTIFY_END_HOUR = 9
+
+MAX_RAIN_MM = 0.5
+MAX_POP = 30
 
 STATE_FILE = f"state_{NTFY_TOPIC}.json"
