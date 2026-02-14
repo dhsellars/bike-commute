@@ -18,4 +18,4 @@ MAX_POP = int(os.getenv("MAX_POP"))
 NTFY_TOPIC = os.getenv("NTFY_TOPIC")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
-STATE_FILE = "state.json"
+STATE_FILE = f"state_{NTFY_TOPIC}.json"
