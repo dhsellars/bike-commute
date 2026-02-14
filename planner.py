@@ -1,12 +1,14 @@
+import json
+import os
 import requests
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from config import (
     LAT, LON, TIMEZONE,
-    EARLIEST, LATEST,
+    START_HOUR, END_HOUR, NOTIFY_END_HOUR,
     MAX_RAIN_MM, MAX_POP,
-    NTFY_URL
+    NTFY_URL, STATE_FILE
 )
 
 # --- WEATHER FETCHING ---
@@ -25,9 +27,9 @@ def fetch_hourly():
     return r.json()["hourly"]
 
 
-# --- FILTERING LOGIC ---
+# --- FIND DRY HOURS ---
 
-def find_dry_windows(hourly):
+def find_dry_hours(hourly):
     tz = ZoneInfo(TIMEZONE)
     now = datetime.now(tz)
 
@@ -35,24 +37,41 @@ def find_dry_windows(hourly):
     rains = hourly["rain"]
     pops = hourly["precipitation_probability"]
 
-    candidates = []
+    dry_hours = []
 
     for t_str, rain, pop in zip(times, rains, pops):
         dt = datetime.fromisoformat(t_str).replace(tzinfo=tz)
 
-        # Only future times
-        if dt <= now:
+        # Only today
+        if dt.date() != now.date():
             continue
 
-        # Only within your allowed travel window
-        if not (EARLIEST <= dt.time() <= LATEST):
+        # Only within commute window
+        if not (START_HOUR <= dt.hour <= END_HOUR):
+            continue
+
+        # Only future hours
+        if dt <= now:
             continue
 
         # Dry criteria
         if rain <= MAX_RAIN_MM and pop <= MAX_POP:
-            candidates.append((dt, rain, pop))
+            dry_hours.append(dt.strftime("%H:%M"))
 
-    return candidates
+    return dry_hours
+
+
+# --- STATE MANAGEMENT ---
+
+def load_state():
+    if not os.path.exists(STATE_FILE):
+        return {"last_notified_hours": []}
+    with open(STATE_FILE, "r") as f:
+        return json.load(f)
+
+def save_state(state):
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2)
 
 
 # --- NOTIFICATION ---
@@ -67,20 +86,33 @@ def notify(message: str):
 # --- MAIN ---
 
 def main():
-    hourly = fetch_hourly()
-    dry = find_dry_windows(hourly)
+    tz = ZoneInfo(TIMEZONE)
+    now = datetime.now(tz)
 
-    if not dry:
-        notify("No dry travel windows found in the next hours.")
+    hourly = fetch_hourly()
+    dry_hours = find_dry_hours(hourly)
+
+    state = load_state()
+    last = state.get("last_notified_hours", [])
+
+    # 7:00 → always send summary
+    if now.hour == 7:
+        msg = "Dry travel hours today:\n" + ", ".join(dry_hours) if dry_hours else "No dry hours today."
+        notify(msg)
+        state["last_notified_hours"] = dry_hours
+        save_state(state)
         return
 
-    lines = [
-        f"{dt.strftime('%H:%M')}  rain={rain:.2f}mm  pop={pop}%"
-        for dt, rain, pop in dry
-    ]
+    # After 17:00 → no updates
+    if now.hour > NOTIFY_END_HOUR:
+        return
 
-    msg = "Dry travel windows:\n" + "\n".join(lines)
-    notify(msg)
+    # During the day → only notify if changed
+    if dry_hours != last:
+        msg = "Updated dry travel hours:\n" + ", ".join(dry_hours) if dry_hours else "No remaining dry hours."
+        notify(msg)
+        state["last_notified_hours"] = dry_hours
+        save_state(state)
 
 
 if __name__ == "__main__":
