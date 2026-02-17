@@ -20,7 +20,7 @@ def save_state(state):
         json.dump(state, f, indent=2)
 
 def notify(message):
-    requests.post(NTFY_URL, json={"message": message})
+    requests.post(NTFY_URL, data=message.encode("utf-8"))
 
 def get_tomorrow_weather():
     url = (
