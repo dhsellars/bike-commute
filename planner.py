@@ -42,13 +42,13 @@ def get_weather_localtime():
     url = (
         "https://api.open-meteo.com/v1/forecast?"
         f"latitude={LAT}&longitude={LON}"
-        "&hourly=precipitation,precipitation_probability"
+        "&hourly=precipitation,precipitation_probability,temperature_2m"
         "&forecast_days=2"
-        f"&timezone={TIMEZONE}"
     )
     r = requests.get(url, timeout=10)
     r.raise_for_status()
     return r.json()
+
 
 # --------------------------
 # Time helpers
@@ -72,6 +72,7 @@ def build_local_dt_index(weather_json, tz: str):
     times = weather_json["hourly"]["time"]
     rain = weather_json["hourly"]["precipitation"]
     pop = weather_json["hourly"]["precipitation_probability"]
+    temp_c = weather["hourly"]["temperature_2m"]
 
     z = ZoneInfo(tz)
     idx = {}
@@ -156,6 +157,7 @@ def main():
     dt_index = build_local_dt_index(weather, TIMEZONE)
 
     snapshot = make_snapshot(now_local, dt_index)
+    temp_f = (temp_c[i] * 9/5) + 32
 
     # Build message
     hours_list = []
@@ -175,7 +177,7 @@ def main():
             bad += 1
         # "08:00 — 🟢 good (0.2mm, 20%) — 2026-02-19"
         hours_list.append(
-            f"{status} {h}: ({r_mm:.1f}mm, {p}%)"
+            f"{h} {status}: ({r_mm:.1f}mm, {p}%) {temp_f:.0f}°F)"
         )
 
     # Summary line
