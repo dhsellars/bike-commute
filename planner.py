@@ -175,7 +175,7 @@ def main():
             bad += 1
         # "08:00 — 🟢 good (0.2mm, 20%) — 2026-02-19"
         hours_list.append(
-            f"{h}:00 — {status} ({r_mm:.1f}mm, {p}%) — {iso.split('T')[0]}"
+            f"{h}:00 — {status} ({r_mm:.1f}mm, {p}%)"
         )
 
     # Summary line
