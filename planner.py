@@ -175,14 +175,14 @@ def main():
             bad += 1
         # "08:00 — 🟢 good (0.2mm, 20%) — 2026-02-19"
         hours_list.append(
-            f"{h}:00 — {status} ({r_mm:.1f}mm, {p}%)"
+            f"{status} {h}: ({r_mm:.1f}mm, {p}%)"
         )
 
     # Summary line
     if good == 0 and borderline == 0:
         summary = "🚫 No good commute windows in the next set of hours."
     elif good > 0 and bad == 0:
-        summary = "✨ All selected hours look great!"
+        summary = "✨ All good for the day!"
     elif good > 0:
         summary = "🌤️ Mostly good biking conditions."
     elif borderline > 0:
