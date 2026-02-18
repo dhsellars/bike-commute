@@ -1,3 +1,79 @@
 {
-  "last_notification": "\u2728 All commute hours tomorrow look great!\n\nBike commute forecast for tomorrow:\n06:00 \u2014 \ud83d\udfe1 borderline (0.0mm, 43%)\n07:00 \u2014 \ud83d\udfe2 good (0.0mm, 25%)\n08:00 \u2014 \ud83d\udfe2 good (0.0mm, 15%)\n09:00 \u2014 \ud83d\udfe2 good (0.0mm, 10%)\n10:00 \u2014 \ud83d\udfe2 good (0.0mm, 13%)"
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n07:00 \u2014 \ud83d\udfe1 borderline (0.0mm, 43%) \u2014 2026-02-19\n08:00 \u2014 \ud83d\udfe2 good (0.0mm, 25%) \u2014 2026-02-19\n09:00 \u2014 \ud83d\udfe2 good (0.0mm, 15%) \u2014 2026-02-19\n10:00 \u2014 \ud83d\udfe2 good (0.0mm, 10%) \u2014 2026-02-19\n11:00 \u2014 \ud83d\udfe2 good (0.0mm, 13%) \u2014 2026-02-19\n12:00 \u2014 \ud83d\udfe2 good (0.0mm, 18%) \u2014 2026-02-19\n13:00 \u2014 \ud83d\udfe2 good (0.0mm, 15%) \u2014 2026-02-19\n14:00 \u2014 \ud83d\udfe2 good (0.0mm, 18%) \u2014 2026-02-19\n15:00 \u2014 \ud83d\udfe2 good (0.0mm, 8%) \u2014 2026-02-19\n16:00 \u2014 \ud83d\udfe2 good (0.0mm, 10%) \u2014 2026-02-19\n17:00 \u2014 \ud83d\udfe2 good (0.0mm, 10%) \u2014 2026-02-19\n18:00 \u2014 \ud83d\udd34 not recommended (0.2mm, 95%) \u2014 2026-02-18",
+  "last_snapshot": {
+    "hours": {
+      "07": {
+        "iso": "2026-02-19T07:00",
+        "r_mm": 0.0,
+        "pop": 43,
+        "status": "\ud83d\udfe1 borderline"
+      },
+      "08": {
+        "iso": "2026-02-19T08:00",
+        "r_mm": 0.0,
+        "pop": 25,
+        "status": "\ud83d\udfe2 good"
+      },
+      "09": {
+        "iso": "2026-02-19T09:00",
+        "r_mm": 0.0,
+        "pop": 15,
+        "status": "\ud83d\udfe2 good"
+      },
+      "10": {
+        "iso": "2026-02-19T10:00",
+        "r_mm": 0.0,
+        "pop": 10,
+        "status": "\ud83d\udfe2 good"
+      },
+      "11": {
+        "iso": "2026-02-19T11:00",
+        "r_mm": 0.0,
+        "pop": 13,
+        "status": "\ud83d\udfe2 good"
+      },
+      "12": {
+        "iso": "2026-02-19T12:00",
+        "r_mm": 0.0,
+        "pop": 18,
+        "status": "\ud83d\udfe2 good"
+      },
+      "13": {
+        "iso": "2026-02-19T13:00",
+        "r_mm": 0.0,
+        "pop": 15,
+        "status": "\ud83d\udfe2 good"
+      },
+      "14": {
+        "iso": "2026-02-19T14:00",
+        "r_mm": 0.0,
+        "pop": 18,
+        "status": "\ud83d\udfe2 good"
+      },
+      "15": {
+        "iso": "2026-02-19T15:00",
+        "r_mm": 0.0,
+        "pop": 8,
+        "status": "\ud83d\udfe2 good"
+      },
+      "16": {
+        "iso": "2026-02-19T16:00",
+        "r_mm": 0.0,
+        "pop": 10,
+        "status": "\ud83d\udfe2 good"
+      },
+      "17": {
+        "iso": "2026-02-19T17:00",
+        "r_mm": 0.0,
+        "pop": 10,
+        "status": "\ud83d\udfe2 good"
+      },
+      "18": {
+        "iso": "2026-02-18T18:00",
+        "r_mm": 0.2,
+        "pop": 95,
+        "status": "\ud83d\udd34 not recommended"
+      }
+    }
+  }
 }
