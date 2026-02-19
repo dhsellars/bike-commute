@@ -176,7 +176,7 @@ def main():
             bad += 1
 
         hours_list.append(
-            f"{h}:00 {status} — {r_mm:.1f}mm, {p}% PoP, {t_f:.0f}°F"
+            f"{h}: {status} — {r_mm:.1f}mm, {p}%, {t_f:.0f}°F"
         )
 
     # Summary
