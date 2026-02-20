@@ -154,7 +154,7 @@ def hour_label(h: int) -> str:
     else:
         label = f"{h-12}pm"
 
-    return label.ljust(4)   # pad to width 4
+    return label.ljust(5)   # pad to width 4
 # --------------------------
 # Main
 # --------------------------
