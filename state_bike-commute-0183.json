@@ -1,5 +1,5 @@
 {
-  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n07: \ud83d\udfe2 good \u2014 0.0mm, 35%, 40\u00b0F\n08: \ud83d\udfe2 good \u2014 0.0mm, 33%, 41\u00b0F\n09: \ud83d\udfe2 good \u2014 0.0mm, 0%, 33\u00b0F\n10: \ud83d\udfe2 good \u2014 0.0mm, 0%, 35\u00b0F\n11: \ud83d\udfe2 good \u2014 0.0mm, 0%, 36\u00b0F\n12: \ud83d\udfe2 good \u2014 0.0mm, 0%, 38\u00b0F\n13: \ud83d\udfe2 good \u2014 0.0mm, 0%, 39\u00b0F\n14: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n15: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n16: \ud83d\udfe2 good \u2014 0.0mm, 0%, 42\u00b0F\n17: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n18: \ud83d\udfe2 good \u2014 0.0mm, 3%, 40\u00b0F",
+  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n07: \ud83d\udfe2 good \u2014 0.0mm, 35%, 40\u00b0F\n08: \ud83d\udfe2 good \u2014 0.0mm, 33%, 41\u00b0F\n09: \ud83d\udfe2 good \u2014 0.0mm, 33%, 42\u00b0F\n10: \ud83d\udfe2 good \u2014 0.0mm, 0%, 35\u00b0F\n11: \ud83d\udfe2 good \u2014 0.0mm, 0%, 36\u00b0F\n12: \ud83d\udfe2 good \u2014 0.0mm, 0%, 38\u00b0F\n13: \ud83d\udfe2 good \u2014 0.0mm, 0%, 39\u00b0F\n14: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n15: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n16: \ud83d\udfe2 good \u2014 0.0mm, 0%, 42\u00b0F\n17: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n18: \ud83d\udfe2 good \u2014 0.0mm, 3%, 40\u00b0F",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -17,10 +17,10 @@
         "status": "\ud83d\udfe2 good"
       },
       "09": {
-        "iso": "2026-02-20T09:00",
+        "iso": "2026-02-21T09:00",
         "r_mm": 0.0,
-        "pop": 0,
-        "temp_c": 0.8,
+        "pop": 33,
+        "temp_c": 5.8,
         "status": "\ud83d\udfe2 good"
       },
       "10": {
