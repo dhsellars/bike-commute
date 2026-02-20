@@ -143,7 +143,16 @@ def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
             return True
 
     return False
-
+    
+def hour_label(h: int) -> str:
+    if h == 0:
+        return "12am"
+    elif 1 <= h < 12:
+        return f"{h}am"
+    elif h == 12:
+        return "12pm"
+    else:
+        return f"{h-12}pm"
 # --------------------------
 # Main
 # --------------------------
@@ -176,7 +185,8 @@ def main():
             bad += 1
 
         hours_list.append(
-            f"{h}: {status} — {r_mm:.1f}mm, {p}%, {t_f:.0f}°F"
+            f"{hour_label(int(h))} {status} — {r_mm:.1f}mm, {p}%, {t_f:.0f}°F"
+            
         )
 
     # Summary
