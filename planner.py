@@ -146,13 +146,15 @@ def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
     
 def hour_label(h: int) -> str:
     if h == 0:
-        return "12am"
+        label = "12am"
     elif 1 <= h < 12:
-        return f"{h}am"
+        label = f"{h}am"
     elif h == 12:
-        return "12pm"
+        label = "12pm"
     else:
-        return f"{h-12}pm"
+        label = f"{h-12}pm"
+
+    return label.ljust(4)   # pad to width 4
 # --------------------------
 # Main
 # --------------------------
