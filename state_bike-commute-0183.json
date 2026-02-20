@@ -1,33 +1,33 @@
 {
-  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n07: \ud83d\udfe2 good \u2014 0.0mm, 35%, 40\u00b0F\n08: \ud83d\udfe2 good \u2014 0.0mm, 33%, 41\u00b0F\n09: \ud83d\udfe2 good \u2014 0.0mm, 33%, 42\u00b0F\n10: \ud83d\udfe2 good \u2014 0.0mm, 0%, 35\u00b0F\n11: \ud83d\udfe2 good \u2014 0.0mm, 0%, 36\u00b0F\n12: \ud83d\udfe2 good \u2014 0.0mm, 0%, 38\u00b0F\n13: \ud83d\udfe2 good \u2014 0.0mm, 0%, 39\u00b0F\n14: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n15: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n16: \ud83d\udfe2 good \u2014 0.0mm, 0%, 42\u00b0F\n17: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n18: \ud83d\udfe2 good \u2014 0.0mm, 3%, 40\u00b0F",
+  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n07: \ud83d\udfe2 good \u2014 0.0mm, 23%, 40\u00b0F\n08: \ud83d\udfe2 good \u2014 0.0mm, 28%, 41\u00b0F\n09: \ud83d\udfe2 good \u2014 0.0mm, 25%, 42\u00b0F\n10: \ud83d\udfe2 good \u2014 0.0mm, 38%, 44\u00b0F\n11: \ud83d\udfe2 good \u2014 0.0mm, 0%, 36\u00b0F\n12: \ud83d\udfe2 good \u2014 0.0mm, 0%, 38\u00b0F\n13: \ud83d\udfe2 good \u2014 0.0mm, 0%, 39\u00b0F\n14: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n15: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n16: \ud83d\udfe2 good \u2014 0.0mm, 0%, 42\u00b0F\n17: \ud83d\udfe2 good \u2014 0.0mm, 0%, 41\u00b0F\n18: \ud83d\udfe2 good \u2014 0.0mm, 0%, 40\u00b0F",
   "last_snapshot": {
     "hours": {
       "07": {
         "iso": "2026-02-21T07:00",
         "r_mm": 0.0,
-        "pop": 35,
+        "pop": 23,
         "temp_c": 4.7,
         "status": "\ud83d\udfe2 good"
       },
       "08": {
         "iso": "2026-02-21T08:00",
         "r_mm": 0.0,
-        "pop": 33,
+        "pop": 28,
         "temp_c": 5.0,
         "status": "\ud83d\udfe2 good"
       },
       "09": {
         "iso": "2026-02-21T09:00",
         "r_mm": 0.0,
-        "pop": 33,
+        "pop": 25,
         "temp_c": 5.8,
         "status": "\ud83d\udfe2 good"
       },
       "10": {
-        "iso": "2026-02-20T10:00",
+        "iso": "2026-02-21T10:00",
         "r_mm": 0.0,
-        "pop": 0,
-        "temp_c": 1.5,
+        "pop": 38,
+        "temp_c": 6.7,
         "status": "\ud83d\udfe2 good"
       },
       "11": {
@@ -82,7 +82,7 @@
       "18": {
         "iso": "2026-02-20T18:00",
         "r_mm": 0.0,
-        "pop": 3,
+        "pop": 0,
         "temp_c": 4.6,
         "status": "\ud83d\udfe2 good"
       }
