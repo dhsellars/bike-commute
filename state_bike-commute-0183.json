@@ -1,5 +1,5 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udd34 not recommended \u2014 1.2mm, 98%, 48\u00b0F\n8am   \ud83d\udd34 not recommended \u2014 1.3mm, 98%, 48\u00b0F\n9am   \ud83d\udd34 not recommended \u2014 1.9mm, 83%, 48\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.7mm, 88%, 49\u00b0F\n11am  \ud83d\udd34 not recommended \u2014 1.3mm, 80%, 49\u00b0F\n12pm  \ud83d\udfe2 good \u2014 0.0mm, 0%, 51\u00b0F\n1pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 53\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.0mm, 5%, 51\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 18%, 49\u00b0F",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udd34 not recommended \u2014 1.2mm, 98%, 48\u00b0F\n8am   \ud83d\udd34 not recommended \u2014 1.3mm, 98%, 48\u00b0F\n9am   \ud83d\udd34 not recommended \u2014 1.9mm, 83%, 48\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.7mm, 88%, 49\u00b0F\n11am  \ud83d\udd34 not recommended \u2014 1.3mm, 80%, 49\u00b0F\n12pm  \ud83d\udfe1 borderline \u2014 0.6mm, 65%, 50\u00b0F\n1pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 53\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.0mm, 0%, 52\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.0mm, 5%, 51\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 18%, 49\u00b0F",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -38,11 +38,11 @@
         "status": "\ud83d\udd34 not recommended"
       },
       "12": {
-        "iso": "2026-02-23T12:00",
-        "r_mm": 0.0,
-        "pop": 0,
-        "temp_c": 10.8,
-        "status": "\ud83d\udfe2 good"
+        "iso": "2026-02-24T12:00",
+        "r_mm": 0.6,
+        "pop": 65,
+        "temp_c": 9.8,
+        "status": "\ud83d\udfe1 borderline"
       },
       "13": {
         "iso": "2026-02-23T13:00",
