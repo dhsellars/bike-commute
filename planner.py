@@ -10,9 +10,9 @@ from config import (
     NTFY_URL, STATE_FILE
 )
 
-# --------------------------
+# --------------------------------------------
 # State helpers
-# --------------------------
+# --------------------------------------------
 def load_state():
     try:
         with open(STATE_FILE, "r") as f:
@@ -24,15 +24,17 @@ def save_state(state):
     with open(STATE_FILE, "w") as f:
         json.dump(state, f, indent=2)
 
-# --------------------------
+
+# --------------------------------------------
 # Notify
-# --------------------------
+# --------------------------------------------
 def notify(message):
     requests.post(NTFY_URL, data=message.encode("utf-8"), timeout=10)
 
-# --------------------------
+
+# --------------------------------------------
 # Weather fetch
-# --------------------------
+# --------------------------------------------
 def get_weather_localtime():
     """
     Fetches up to 48 hours of hourly precipitation, PoP, and temperature in LOCAL time.
@@ -48,9 +50,10 @@ def get_weather_localtime():
     r.raise_for_status()
     return r.json()
 
-# --------------------------
+
+# --------------------------------------------
 # Time helpers
-# --------------------------
+# --------------------------------------------
 def next_occurrence_of_hour(now_local: datetime, hour: int) -> datetime:
     """
     First upcoming occurrence of `hour` (0–23) after `now_local`.
@@ -59,6 +62,7 @@ def next_occurrence_of_hour(now_local: datetime, hour: int) -> datetime:
     if candidate <= now_local:
         candidate += timedelta(days=1)
     return candidate
+
 
 def build_local_dt_index(weather_json, tz: str):
     """
@@ -76,9 +80,10 @@ def build_local_dt_index(weather_json, tz: str):
         idx[dt_local] = (float(r_mm), int(p), float(t_c))
     return idx
 
-# --------------------------
+
+# --------------------------------------------
 # Status + snapshot
-# --------------------------
+# --------------------------------------------
 def classify(r_mm: float, p: int) -> str:
     if r_mm <= MAX_RAIN_MM and p <= MAX_POP:
         return "🟢 good"
@@ -87,12 +92,29 @@ def classify(r_mm: float, p: int) -> str:
     else:
         return "🔴 nope"
 
+
+def format_status(status: str, word_width: int = 6) -> str:
+    """
+    Pads only the word (after emoji) to a fixed width.
+    Input:  '🟢 good'
+    Output: '🟢 good  '
+    """
+    parts = status.split(" ", 1)
+    if len(parts) == 2:
+        emoji, word = parts
+    else:
+        emoji, word = "", status
+
+    padded_word = word.ljust(word_width)
+    return f"{emoji} {padded_word}"
+
+
 def make_snapshot(now_local: datetime, idx: dict) -> dict:
     """
-    Snapshot format:
+    Snapshot:
     {
       "hours": {
-         "08": {"iso": "...", "r_mm": 0.2, "pop": 20, "temp_c": 3.1, "status": "🟢 good"},
+         "08": {"iso": "02.19T08:00", "r_mm": ..., "pop": ..., "temp_c": ..., "status": ...},
          ...
       }
     }
@@ -119,6 +141,7 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
 
     return {"hours": hours_map}
 
+
 def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
     if not prev_snapshot:
         return True
@@ -143,8 +166,13 @@ def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
             return True
 
     return False
-    
+
+
 def hour_label(h: int) -> str:
+    """
+    Produces left‑padded hour labels for clean alignment,
+    e.g., '8am  ', '12pm '.
+    """
     if h == 0:
         label = "12am"
     elif 1 <= h < 12:
@@ -154,10 +182,12 @@ def hour_label(h: int) -> str:
     else:
         label = f"{h-12}pm"
 
-    return label.ljust(5)   # pad to width 4
-# --------------------------
+    return label.ljust(5)
+
+
+# --------------------------------------------
 # Main
-# --------------------------
+# --------------------------------------------
 def main():
     state = load_state()
     now_local = datetime.now(ZoneInfo(TIMEZONE))
@@ -167,17 +197,19 @@ def main():
 
     snapshot = make_snapshot(now_local, dt_index)
 
-    # Build message
     hours_list = []
     good = borderline = bad = 0
 
     for h in sorted(snapshot["hours"].keys()):
         entry = snapshot["hours"][h]
         status = entry["status"]
+        status_fixed = format_status(status, word_width=6)
+
         r_mm = entry["r_mm"]
         p = entry["pop"]
         t_c = entry["temp_c"]
         t_f = (t_c * 9/5) + 32
+        date_str = entry["iso"].split("T")[0]  # mm.dd
 
         if status.startswith("🟢"):
             good += 1
@@ -187,8 +219,7 @@ def main():
             bad += 1
 
         hours_list.append(
-            f"{hour_label(int(h))} {status} — {r_mm:.1f}mm, {p}%, {t_f:.0f}°F"
-            
+            f"{hour_label(int(h))} {status_fixed} ({r_mm:>4.1f}, {p:>3}%) [{date_str}]"
         )
 
     # Summary
@@ -209,12 +240,12 @@ def main():
         "\n".join(hours_list) if hours_list else "(none available)"
     )
 
-    # Notify if needed
     if should_notify(state.get("last_snapshot"), snapshot):
         notify(message)
         state["last_notification"] = message
         state["last_snapshot"] = snapshot
         save_state(state)
+
 
 if __name__ == "__main__":
     main()
