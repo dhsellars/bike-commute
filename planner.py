@@ -83,9 +83,9 @@ def classify(r_mm: float, p: int) -> str:
     if r_mm <= MAX_RAIN_MM and p <= MAX_POP:
         return "🟢 good"
     elif r_mm <= MAX_RAIN_MM * 2 and p <= MAX_POP * 2:
-        return "🟡 borderline"
+        return "🟡 meh"
     else:
-        return "🔴 not recommended"
+        return "🔴 nope"
 
 def make_snapshot(now_local: datetime, idx: dict) -> dict:
     """
@@ -110,7 +110,7 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
         status = classify(r_mm, p)
 
         hours_map[f"{h:02}"] = {
-            "iso": target_dt.strftime("%Y-%m-%dT%H:%M"),
+            "iso": target_dt.strftime("%m.%dT%H:%M"),
             "r_mm": round(r_mm, 1),
             "pop": int(p),
             "temp_c": round(t_c, 1),
