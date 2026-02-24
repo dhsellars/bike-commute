@@ -1,5 +1,5 @@
 {
-  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n8am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n9am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n10am  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n11am  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n12pm  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n1pm   \ud83d\udfe1 meh    ( 0.0,  55%) [02.24]\n2pm   \ud83d\udfe2 good   ( 0.2,  33%) [02.24]\n3pm   \ud83d\udfe2 good   ( 0.0,  13%) [02.24]\n4pm   \ud83d\udfe2 good   ( 0.0,  10%) [02.24]\n5pm   \ud83d\udfe2 good   ( 0.0,   8%) [02.24]\n6pm   \ud83d\udfe2 good   ( 0.0,  10%) [02.24]",
+  "last_notification": "\u2728 All good for the day!\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n8am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n9am   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n10am  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n11am  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n12pm  \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n1pm   \ud83d\udfe2 good   ( 0.0,   0%) [02.25]\n2pm   \ud83d\udfe2 good   ( 0.2,  33%) [02.24]\n3pm   \ud83d\udfe2 good   ( 0.0,  13%) [02.24]\n4pm   \ud83d\udfe2 good   ( 0.0,  10%) [02.24]\n5pm   \ud83d\udfe2 good   ( 0.0,   8%) [02.24]\n6pm   \ud83d\udfe2 good   ( 0.0,  10%) [02.24]",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -45,11 +45,11 @@
         "status": "\ud83d\udfe2 good"
       },
       "13": {
-        "iso": "02.24T13:00",
+        "iso": "02.25T13:00",
         "r_mm": 0.0,
-        "pop": 55,
-        "temp_c": 10.2,
-        "status": "\ud83d\udfe1 meh"
+        "pop": 0,
+        "temp_c": 11.5,
+        "status": "\ud83d\udfe2 good"
       },
       "14": {
         "iso": "02.24T14:00",
