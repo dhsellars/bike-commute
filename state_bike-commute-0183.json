@@ -1,61 +1,61 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n8am   \ud83d\udd34 not recommended \u2014 0.4mm, 83%, 49\u00b0F\n9am   \ud83d\udd34 not recommended \u2014 2.3mm, 58%, 49\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.7mm, 78%, 49\u00b0F\n11am  \ud83d\udfe1 borderline \u2014 0.8mm, 53%, 49\u00b0F\n12pm  \ud83d\udd34 not recommended \u2014 1.8mm, 58%, 49\u00b0F\n1pm   \ud83d\udd34 not recommended \u2014 1.3mm, 38%, 49\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.1mm, 35%, 49\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 10%, 49\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.0mm, 10%, 49\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.4mm, 3%, 49\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 49\u00b0F",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n8am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n9am   \ud83d\udd34 not recommended \u2014 2.9mm, 58%, 49\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.6mm, 78%, 50\u00b0F\n11am  \ud83d\udfe1 borderline \u2014 0.9mm, 53%, 49\u00b0F\n12pm  \ud83d\udfe1 borderline \u2014 1.0mm, 58%, 49\u00b0F\n1pm   \ud83d\udd34 not recommended \u2014 1.1mm, 38%, 49\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.3mm, 35%, 49\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 10%, 49\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.1mm, 10%, 49\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 49\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 48\u00b0F",
   "last_snapshot": {
     "hours": {
       "07": {
         "iso": "2026-02-25T07:00",
         "r_mm": 0.0,
         "pop": 0,
-        "temp_c": 6.3,
+        "temp_c": 6.1,
         "status": "\ud83d\udfe2 good"
       },
       "08": {
-        "iso": "2026-02-24T08:00",
-        "r_mm": 0.4,
-        "pop": 83,
-        "temp_c": 9.6,
-        "status": "\ud83d\udd34 not recommended"
+        "iso": "2026-02-25T08:00",
+        "r_mm": 0.0,
+        "pop": 0,
+        "temp_c": 6.3,
+        "status": "\ud83d\udfe2 good"
       },
       "09": {
         "iso": "2026-02-24T09:00",
-        "r_mm": 2.3,
+        "r_mm": 2.9,
         "pop": 58,
         "temp_c": 9.6,
         "status": "\ud83d\udd34 not recommended"
       },
       "10": {
         "iso": "2026-02-24T10:00",
-        "r_mm": 1.7,
+        "r_mm": 1.6,
         "pop": 78,
-        "temp_c": 9.7,
+        "temp_c": 9.8,
         "status": "\ud83d\udd34 not recommended"
       },
       "11": {
         "iso": "2026-02-24T11:00",
-        "r_mm": 0.8,
+        "r_mm": 0.9,
         "pop": 53,
         "temp_c": 9.7,
         "status": "\ud83d\udfe1 borderline"
       },
       "12": {
         "iso": "2026-02-24T12:00",
-        "r_mm": 1.8,
+        "r_mm": 1.0,
         "pop": 58,
         "temp_c": 9.5,
-        "status": "\ud83d\udd34 not recommended"
+        "status": "\ud83d\udfe1 borderline"
       },
       "13": {
         "iso": "2026-02-24T13:00",
-        "r_mm": 1.3,
+        "r_mm": 1.1,
         "pop": 38,
         "temp_c": 9.6,
         "status": "\ud83d\udd34 not recommended"
       },
       "14": {
         "iso": "2026-02-24T14:00",
-        "r_mm": 0.1,
+        "r_mm": 0.3,
         "pop": 35,
-        "temp_c": 9.7,
+        "temp_c": 9.5,
         "status": "\ud83d\udfe2 good"
       },
       "15": {
@@ -67,23 +67,23 @@
       },
       "16": {
         "iso": "2026-02-24T16:00",
-        "r_mm": 0.0,
+        "r_mm": 0.1,
         "pop": 10,
-        "temp_c": 9.4,
+        "temp_c": 9.3,
         "status": "\ud83d\udfe2 good"
       },
       "17": {
         "iso": "2026-02-24T17:00",
-        "r_mm": 0.4,
+        "r_mm": 0.0,
         "pop": 3,
-        "temp_c": 9.6,
+        "temp_c": 9.3,
         "status": "\ud83d\udfe2 good"
       },
       "18": {
         "iso": "2026-02-24T18:00",
         "r_mm": 0.0,
         "pop": 3,
-        "temp_c": 9.5,
+        "temp_c": 9.0,
         "status": "\ud83d\udfe2 good"
       }
     }
