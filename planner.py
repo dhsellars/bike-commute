@@ -133,6 +133,7 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
 
         hours_map[f"{h:02}"] = {
             "iso": target_dt.strftime("%m.%dT%H:%M"),
+            "dow": target_dt.strftime("%a"),   # ← NEW
             "r_mm": round(r_mm, 1),
             "pop": int(p),
             "temp_c": round(t_c, 1),
@@ -182,7 +183,7 @@ def hour_label(h: int) -> str:
     else:
         label = f"{h-12}pm"
 
-    return label.ljust(5)
+    return label.ljust(4)
 
 
 # --------------------------------------------
@@ -219,20 +220,20 @@ def main():
             bad += 1
 
         hours_list.append(
-            f"{hour_label(int(h))} {status_fixed} ({r_mm:>4.1f}, {p:>3}%) [{date_str}]"
+            f"{hour_label(int(h))} {status_fixed} ({r_mm:>4.1f},{p:>3}%, {t_f}) [{dow}]"
         )
 
     # Summary
     if good == 0 and borderline == 0:
-        summary = "🚫 No good commute windows in the next set of hours."
+        summary = "🚫 No good travel times."
     elif good > 0 and bad == 0:
-        summary = "✨ All good for the day!"
+        summary = "✨ All good all day!"
     elif good > 0:
-        summary = "🌤️ Mostly good biking conditions."
+        summary = "🌤️ Mostly good conditions."
     elif borderline > 0:
-        summary = "🌦️ Mixed conditions — choose your hour wisely."
+        summary = "🌦️ Mixed conditions — choose wisely."
     else:
-        summary = "🌧️ Rain likely — biking may not be ideal."
+        summary = "🌧️ Rain likely."
 
     message = summary + "\n\nNext occurrences for {:02}:00–{:02}:00:\n{}".format(
         START_HOUR,
