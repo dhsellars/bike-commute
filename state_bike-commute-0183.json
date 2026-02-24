@@ -1,5 +1,5 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n8am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n9am   \ud83d\udd34 not recommended \u2014 2.9mm, 58%, 49\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.6mm, 78%, 50\u00b0F\n11am  \ud83d\udfe1 borderline \u2014 0.9mm, 53%, 49\u00b0F\n12pm  \ud83d\udfe1 borderline \u2014 1.0mm, 58%, 49\u00b0F\n1pm   \ud83d\udd34 not recommended \u2014 1.1mm, 38%, 49\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.3mm, 35%, 49\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 10%, 49\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.1mm, 10%, 49\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 49\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 48\u00b0F",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good biking conditions.\n\nNext occurrences for 07:00\u201318:00:\n7am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n8am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 43\u00b0F\n9am   \ud83d\udfe2 good \u2014 0.0mm, 0%, 44\u00b0F\n10am  \ud83d\udd34 not recommended \u2014 1.6mm, 78%, 50\u00b0F\n11am  \ud83d\udfe1 borderline \u2014 0.9mm, 53%, 49\u00b0F\n12pm  \ud83d\udfe1 borderline \u2014 1.0mm, 58%, 49\u00b0F\n1pm   \ud83d\udd34 not recommended \u2014 1.1mm, 38%, 49\u00b0F\n2pm   \ud83d\udfe2 good \u2014 0.3mm, 35%, 49\u00b0F\n3pm   \ud83d\udfe2 good \u2014 0.0mm, 10%, 49\u00b0F\n4pm   \ud83d\udfe2 good \u2014 0.1mm, 10%, 49\u00b0F\n5pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 49\u00b0F\n6pm   \ud83d\udfe2 good \u2014 0.0mm, 3%, 48\u00b0F",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -17,11 +17,11 @@
         "status": "\ud83d\udfe2 good"
       },
       "09": {
-        "iso": "2026-02-24T09:00",
-        "r_mm": 2.9,
-        "pop": 58,
-        "temp_c": 9.6,
-        "status": "\ud83d\udd34 not recommended"
+        "iso": "2026-02-25T09:00",
+        "r_mm": 0.0,
+        "pop": 0,
+        "temp_c": 6.6,
+        "status": "\ud83d\udfe2 good"
       },
       "10": {
         "iso": "2026-02-24T10:00",
