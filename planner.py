@@ -29,7 +29,12 @@ def save_state(state):
 # Notify
 # --------------------------------------------
 def notify(message):
-    requests.post(NTFY_URL, data=message.encode("utf-8"), timeout=10)
+    # Optional: protect against notification failures
+    try:
+        requests.post(NTFY_URL, data=message.encode("utf-8"), timeout=10)
+    except Exception:
+        # You could log this if you want visibility
+        pass
 
 
 # --------------------------------------------
@@ -39,14 +44,16 @@ def get_weather_localtime():
     """
     Fetches up to 48 hours of hourly precipitation, PoP, and temperature in LOCAL time.
     """
-    url = (
-        "https://api.open-meteo.com/v1/forecast?"
-        f"latitude={LAT}&longitude={LON}"
-        "&hourly=precipitation,precipitation_probability,temperature_2m"
-        "&forecast_days=2"
-        f"&timezone={TIMEZONE}"
-    )
-    r = requests.get(url, timeout=10)
+    # FIX: Build URL via params (avoid '&amp;' issues and ensure proper encoding)
+    base = "https://api.open-meteo.com/v1/forecast"
+    params = {
+        "latitude": LAT,
+        "longitude": LON,
+        "hourly": "precipitation,precipitation_probability,temperature_2m",
+        "forecast_days": 2,
+        "timezone": TIMEZONE,
+    }
+    r = requests.get(base, params=params, timeout=10)
     r.raise_for_status()
     return r.json()
 
@@ -76,7 +83,12 @@ def build_local_dt_index(weather_json, tz: str):
     z = ZoneInfo(tz)
     idx = {}
     for t, r_mm, p, t_c in zip(times, rain, pop, temp):
-        dt_local = datetime.fromisoformat(t).replace(tzinfo=z)
+        dt = datetime.fromisoformat(t)
+        # FIX: Respect tz if present; otherwise assign provided tz
+        if dt.tzinfo is None:
+            dt_local = dt.replace(tzinfo=z)
+        else:
+            dt_local = dt.astimezone(z)
         idx[dt_local] = (float(r_mm), int(p), float(t_c))
     return idx
 
@@ -133,7 +145,7 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
 
         hours_map[f"{h:02}"] = {
             "iso": target_dt.strftime("%m.%dT%H:%M"),
-            "dow": target_dt.strftime("%a"),   # ← NEW
+            "dow": target_dt.strftime("%a"),   # keeps your new field
             "r_mm": round(r_mm, 1),
             "pop": int(p),
             "temp_c": round(t_c, 1),
@@ -210,7 +222,9 @@ def main():
         p = entry["pop"]
         t_c = entry["temp_c"]
         t_f = (t_c * 9/5) + 32
-        date_str = entry["iso"].split("T")[0]  # mm.dd
+        dow = entry["dow"]  # FIX: define dow from entry
+        # date_str available if you want it:
+        # date_str = entry["iso"].split("T")[0]  # mm.dd
 
         if status.startswith("🟢"):
             good += 1
@@ -219,8 +233,9 @@ def main():
         else:
             bad += 1
 
+        # FIX: Replace HTML-escaped format specifiers and show °F nicely
         hours_list.append(
-            f"{hour_label(int(h))} {status_fixed} ({r_mm:>4.1f},{p:>3}%, {t_f}) [{dow}]"
+            f"{hour_label(int(h))} {status_fixed} ({r_mm:4.1f},{p:3d}%, {t_f:4.0f}°F) [{dow}]"
         )
 
     # Summary
