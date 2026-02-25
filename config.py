@@ -11,7 +11,7 @@ NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 # Public config (safe to commit)
 START_HOUR = 7
-END_HOUR = 18
+END_HOUR = 20
 
 MAX_RAIN_MM = 0.5
 MAX_POP = 40
