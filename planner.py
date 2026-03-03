@@ -2,6 +2,7 @@ import json
 import requests
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
+from typing import Optional  # <-- add this
 from config import (
     LAT, LON,
     TIMEZONE, START_HOUR, END_HOUR,
@@ -29,11 +30,9 @@ def save_state(state):
 # Notify
 # --------------------------------------------
 def notify(message):
-    # Optional: protect against notification failures
     try:
         requests.post(NTFY_URL, data=message.encode("utf-8"), timeout=10)
     except Exception:
-        # You could log this if you want visibility
         pass
 
 
@@ -41,10 +40,6 @@ def notify(message):
 # Weather fetch
 # --------------------------------------------
 def get_weather_localtime():
-    """
-    Fetches up to 48 hours of hourly precipitation, PoP, and temperature in LOCAL time.
-    """
-    # FIX: Build URL via params (avoid '&amp;' issues and ensure proper encoding)
     base = "https://api.open-meteo.com/v1/forecast"
     params = {
         "latitude": LAT,
@@ -62,9 +57,6 @@ def get_weather_localtime():
 # Time helpers
 # --------------------------------------------
 def next_occurrence_of_hour(now_local: datetime, hour: int) -> datetime:
-    """
-    First upcoming occurrence of `hour` (0–23) after `now_local`.
-    """
     candidate = now_local.replace(hour=hour, minute=0, second=0, microsecond=0)
     if candidate <= now_local:
         candidate += timedelta(days=1)
@@ -72,9 +64,6 @@ def next_occurrence_of_hour(now_local: datetime, hour: int) -> datetime:
 
 
 def build_local_dt_index(weather_json, tz: str):
-    """
-    Builds a dict {aware_datetime: (precip_mm, pop, temp_c)}.
-    """
     times = weather_json["hourly"]["time"]
     rain = weather_json["hourly"]["precipitation"]
     pop = weather_json["hourly"]["precipitation_probability"]
@@ -84,7 +73,6 @@ def build_local_dt_index(weather_json, tz: str):
     idx = {}
     for t, r_mm, p, t_c in zip(times, rain, pop, temp):
         dt = datetime.fromisoformat(t)
-        # FIX: Respect tz if present; otherwise assign provided tz
         if dt.tzinfo is None:
             dt_local = dt.replace(tzinfo=z)
         else:
@@ -106,11 +94,6 @@ def classify(r_mm: float, p: int) -> str:
 
 
 def format_status(status: str, word_width: int = 6) -> str:
-    """
-    Pads only the word (after emoji) to a fixed width.
-    Input:  '🟢 good'
-    Output: '🟢 good  '
-    """
     parts = status.split(" ", 1)
     if len(parts) == 2:
         emoji, word = parts
@@ -122,15 +105,6 @@ def format_status(status: str, word_width: int = 6) -> str:
 
 
 def make_snapshot(now_local: datetime, idx: dict) -> dict:
-    """
-    Snapshot:
-    {
-      "hours": {
-         "08": {"iso": "02.19T08:00", "r_mm": ..., "pop": ..., "temp_c": ..., "status": ...},
-         ...
-      }
-    }
-    """
     hours_map = {}
     tz = ZoneInfo(TIMEZONE)
 
@@ -145,7 +119,7 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
 
         hours_map[f"{h:02}"] = {
             "iso": target_dt.strftime("%m.%dT%H:%M"),
-            "dow": target_dt.strftime("%a"),   # keeps your new field
+            "dow": target_dt.strftime("%a"),
             "r_mm": round(r_mm, 1),
             "pop": int(p),
             "temp_c": round(t_c, 1),
@@ -155,19 +129,21 @@ def make_snapshot(now_local: datetime, idx: dict) -> dict:
     return {"hours": hours_map}
 
 
-def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
+def should_notify(prev_snapshot: Optional[dict], new_snapshot: dict) -> bool:
     if not prev_snapshot:
         return True
 
-    prev_hours = prev_snapshot.get("hours", {})
-    new_hours = new_snapshot.get("hours", {})
+    prev_hours = prev_snapshot.get("hours", {}) or {}
+    new_hours = new_snapshot.get("hours", {}) or {}
 
     if set(prev_hours.keys()) != set(new_hours.keys()):
         return True
 
     for h in new_hours:
-        p = prev_hours[h]
+        p = prev_hours.get(h)
         n = new_hours[h]
+        if p is None:
+            return True
 
         if NOTIFY_ON_STATUS_CHANGE and p["status"] != n["status"]:
             return True
@@ -182,10 +158,6 @@ def should_notify(prev_snapshot: dict | None, new_snapshot: dict) -> bool:
 
 
 def hour_label(h: int) -> str:
-    """
-    Produces left‑padded hour labels for clean alignment,
-    e.g., '8am  ', '12pm '.
-    """
     if h == 0:
         label = "12am"
     elif 1 <= h < 12:
@@ -222,9 +194,7 @@ def main():
         p = entry["pop"]
         t_c = entry["temp_c"]
         t_f = (t_c * 9/5) + 32
-        dow = entry["dow"]  # FIX: define dow from entry
-        # date_str available if you want it:
-        # date_str = entry["iso"].split("T")[0]  # mm.dd
+        dow = entry["dow"]
 
         if status.startswith("🟢"):
             good += 1
@@ -233,12 +203,10 @@ def main():
         else:
             bad += 1
 
-        # FIX: Replace HTML-escaped format specifiers and show °F nicely
         hours_list.append(
             f"{hour_label(int(h))} {status_fixed} ({r_mm:4.1f},{p:3d}%, {t_f:4.0f}°F) [{dow}]"
         )
 
-    # Summary
     if good == 0 and borderline == 0:
         summary = "🚫 No good travel times."
     elif good > 0 and bad == 0:
