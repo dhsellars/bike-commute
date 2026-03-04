@@ -48,7 +48,7 @@ def get_weather_localtime():
         "forecast_days": 2,
         "timezone": TIMEZONE,
     }
-    r = requests.get(base, params=params, timeout=10)
+    r = requests.get(base, params=params, timeout=30)
     r.raise_for_status()
     return r.json()
 
