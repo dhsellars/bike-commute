@@ -1,5 +1,5 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udd34 nope   ( 1.8, 75%,   45\u00b0F) [Sat]\n8am  \ud83d\udfe1 meh    ( 0.4, 65%,   40\u00b0F) [Sat]\n9am  \ud83d\udfe1 meh    ( 0.0, 55%,   40\u00b0F) [Sat]\n10am \ud83d\udfe1 meh    ( 0.0, 58%,   41\u00b0F) [Sat]\n11am \ud83d\udfe1 meh    ( 0.0, 70%,   41\u00b0F) [Sat]\n12pm \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n1pm  \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n2pm  \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n3pm  \ud83d\udfe1 meh    ( 0.0, 58%,   43\u00b0F) [Sat]\n4pm  \ud83d\udfe1 meh    ( 0.0, 43%,   43\u00b0F) [Sat]\n5pm  \ud83d\udfe2 good   ( 0.0, 35%,   42\u00b0F) [Sat]\n6pm  \ud83d\udfe2 good   ( 0.0, 23%,   41\u00b0F) [Sat]\n7pm  \ud83d\udfe2 good   ( 0.0,  0%,   52\u00b0F) [Fri]\n8pm  \ud83d\udfe2 good   ( 0.0,  0%,   50\u00b0F) [Fri]",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udd34 nope   ( 1.8, 75%,   45\u00b0F) [Sat]\n8am  \ud83d\udfe1 meh    ( 0.4, 65%,   40\u00b0F) [Sat]\n9am  \ud83d\udfe1 meh    ( 0.0, 55%,   40\u00b0F) [Sat]\n10am \ud83d\udfe1 meh    ( 0.0, 58%,   41\u00b0F) [Sat]\n11am \ud83d\udfe1 meh    ( 0.0, 70%,   41\u00b0F) [Sat]\n12pm \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n1pm  \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n2pm  \ud83d\udfe1 meh    ( 0.0, 80%,   42\u00b0F) [Sat]\n3pm  \ud83d\udfe1 meh    ( 0.0, 58%,   43\u00b0F) [Sat]\n4pm  \ud83d\udfe1 meh    ( 0.0, 43%,   43\u00b0F) [Sat]\n5pm  \ud83d\udfe2 good   ( 0.0, 35%,   42\u00b0F) [Sat]\n6pm  \ud83d\udfe2 good   ( 0.0, 23%,   41\u00b0F) [Sat]\n7pm  \ud83d\udfe2 good   ( 0.0, 20%,   40\u00b0F) [Sat]\n8pm  \ud83d\udfe2 good   ( 0.0,  0%,   50\u00b0F) [Fri]",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -99,11 +99,11 @@
         "status": "\ud83d\udfe2 good"
       },
       "19": {
-        "iso": "03.13T19:00",
-        "dow": "Fri",
+        "iso": "03.14T19:00",
+        "dow": "Sat",
         "r_mm": 0.0,
-        "pop": 0,
-        "temp_c": 11.0,
+        "pop": 20,
+        "temp_c": 4.3,
         "status": "\ud83d\udfe2 good"
       },
       "20": {
