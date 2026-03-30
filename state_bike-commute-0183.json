@@ -1,5 +1,5 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.1,  8%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.2,  5%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 15%,   35\u00b0F) [Tue]\n11am \ud83d\udd34 nope   ( 0.5, 95%,   38\u00b0F) [Mon]\n12pm \ud83d\udd34 nope   ( 0.1, 93%,   41\u00b0F) [Mon]\n1pm  \ud83d\udd34 nope   ( 0.0, 95%,   43\u00b0F) [Mon]\n2pm  \ud83d\udd34 nope   ( 0.0, 88%,   45\u00b0F) [Mon]\n3pm  \ud83d\udd34 nope   ( 0.5, 90%,   43\u00b0F) [Mon]\n4pm  \ud83d\udd34 nope   ( 0.4, 90%,   41\u00b0F) [Mon]\n5pm  \ud83d\udfe1 meh    ( 0.0, 80%,   43\u00b0F) [Mon]\n6pm  \ud83d\udfe1 meh    ( 0.1, 55%,   44\u00b0F) [Mon]\n7pm  \ud83d\udfe2 good   ( 0.0, 18%,   41\u00b0F) [Mon]\n8pm  \ud83d\udfe2 good   ( 0.0, 20%,   40\u00b0F) [Mon]",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.1,  8%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.2,  3%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 18%,   35\u00b0F) [Tue]\n11am \ud83d\udfe2 good   ( 0.0, 20%,   37\u00b0F) [Tue]\n12pm \ud83d\udfe2 good   ( 0.0, 15%,   38\u00b0F) [Tue]\n1pm  \ud83d\udd34 nope   ( 0.0, 95%,   43\u00b0F) [Mon]\n2pm  \ud83d\udd34 nope   ( 0.0,100%,   45\u00b0F) [Mon]\n3pm  \ud83d\udd34 nope   ( 0.5,100%,   43\u00b0F) [Mon]\n4pm  \ud83d\udd34 nope   ( 0.4, 95%,   41\u00b0F) [Mon]\n5pm  \ud83d\udfe1 meh    ( 0.0, 80%,   43\u00b0F) [Mon]\n6pm  \ud83d\udfe1 meh    ( 0.1, 63%,   44\u00b0F) [Mon]\n7pm  \ud83d\udfe2 good   ( 0.0, 23%,   41\u00b0F) [Mon]\n8pm  \ud83d\udfe2 good   ( 0.0, 18%,   40\u00b0F) [Mon]",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -14,7 +14,7 @@
         "iso": "03.31T08:00",
         "dow": "Tue",
         "r_mm": 0.2,
-        "pop": 5,
+        "pop": 3,
         "temp_c": 0.9,
         "status": "\ud83d\udfe2 good"
       },
@@ -30,25 +30,25 @@
         "iso": "03.31T10:00",
         "dow": "Tue",
         "r_mm": 0.0,
-        "pop": 15,
+        "pop": 18,
         "temp_c": 1.8,
         "status": "\ud83d\udfe2 good"
       },
       "11": {
-        "iso": "03.30T11:00",
-        "dow": "Mon",
-        "r_mm": 0.5,
-        "pop": 95,
-        "temp_c": 3.6,
-        "status": "\ud83d\udd34 nope"
+        "iso": "03.31T11:00",
+        "dow": "Tue",
+        "r_mm": 0.0,
+        "pop": 20,
+        "temp_c": 2.9,
+        "status": "\ud83d\udfe2 good"
       },
       "12": {
-        "iso": "03.30T12:00",
-        "dow": "Mon",
-        "r_mm": 0.1,
-        "pop": 93,
-        "temp_c": 5.2,
-        "status": "\ud83d\udd34 nope"
+        "iso": "03.31T12:00",
+        "dow": "Tue",
+        "r_mm": 0.0,
+        "pop": 15,
+        "temp_c": 3.5,
+        "status": "\ud83d\udfe2 good"
       },
       "13": {
         "iso": "03.30T13:00",
@@ -62,7 +62,7 @@
         "iso": "03.30T14:00",
         "dow": "Mon",
         "r_mm": 0.0,
-        "pop": 88,
+        "pop": 100,
         "temp_c": 7.1,
         "status": "\ud83d\udd34 nope"
       },
@@ -70,7 +70,7 @@
         "iso": "03.30T15:00",
         "dow": "Mon",
         "r_mm": 0.5,
-        "pop": 90,
+        "pop": 100,
         "temp_c": 6.3,
         "status": "\ud83d\udd34 nope"
       },
@@ -78,7 +78,7 @@
         "iso": "03.30T16:00",
         "dow": "Mon",
         "r_mm": 0.4,
-        "pop": 90,
+        "pop": 95,
         "temp_c": 5.1,
         "status": "\ud83d\udd34 nope"
       },
@@ -94,7 +94,7 @@
         "iso": "03.30T18:00",
         "dow": "Mon",
         "r_mm": 0.1,
-        "pop": 55,
+        "pop": 63,
         "temp_c": 6.4,
         "status": "\ud83d\udfe1 meh"
       },
@@ -102,7 +102,7 @@
         "iso": "03.30T19:00",
         "dow": "Mon",
         "r_mm": 0.0,
-        "pop": 18,
+        "pop": 23,
         "temp_c": 5.1,
         "status": "\ud83d\udfe2 good"
       },
@@ -110,7 +110,7 @@
         "iso": "03.30T20:00",
         "dow": "Mon",
         "r_mm": 0.0,
-        "pop": 20,
+        "pop": 18,
         "temp_c": 4.4,
         "status": "\ud83d\udfe2 good"
       }
