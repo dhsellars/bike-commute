@@ -1,5 +1,5 @@
 {
-  "last_notification": "\u2728 All good all day!\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.0, 13%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.1,  0%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 10%,   36\u00b0F) [Tue]\n11am \ud83d\udfe2 good   ( 0.0, 13%,   38\u00b0F) [Tue]\n12pm \ud83d\udfe2 good   ( 0.0,  0%,   39\u00b0F) [Tue]\n1pm  \ud83d\udfe2 good   ( 0.0,  8%,   41\u00b0F) [Tue]\n2pm  \ud83d\udfe2 good   ( 0.0, 18%,   41\u00b0F) [Tue]\n3pm  \ud83d\udfe2 good   ( 0.0, 23%,   43\u00b0F) [Tue]\n4pm  \ud83d\udfe2 good   ( 0.0, 25%,   44\u00b0F) [Tue]\n5pm  \ud83d\udfe2 good   ( 0.0, 25%,   44\u00b0F) [Tue]\n6pm  \ud83d\udfe2 good   ( 0.0, 10%,   45\u00b0F) [Tue]\n7pm  \ud83d\udfe2 good   ( 0.0,  3%,   43\u00b0F) [Tue]\n8pm  \ud83d\udfe2 good   ( 0.4, 15%,   38\u00b0F) [Mon]",
+  "last_notification": "\u2728 All good all day!\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.0, 13%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.1,  0%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 10%,   36\u00b0F) [Tue]\n11am \ud83d\udfe2 good   ( 0.0, 13%,   38\u00b0F) [Tue]\n12pm \ud83d\udfe2 good   ( 0.0,  0%,   39\u00b0F) [Tue]\n1pm  \ud83d\udfe2 good   ( 0.0,  8%,   41\u00b0F) [Tue]\n2pm  \ud83d\udfe2 good   ( 0.0, 18%,   41\u00b0F) [Tue]\n3pm  \ud83d\udfe2 good   ( 0.0, 23%,   43\u00b0F) [Tue]\n4pm  \ud83d\udfe2 good   ( 0.0, 25%,   44\u00b0F) [Tue]\n5pm  \ud83d\udfe2 good   ( 0.0, 25%,   44\u00b0F) [Tue]\n6pm  \ud83d\udfe2 good   ( 0.0, 10%,   45\u00b0F) [Tue]\n7pm  \ud83d\udfe2 good   ( 0.0,  3%,   43\u00b0F) [Tue]\n8pm  \ud83d\udfe2 good   ( 0.0,  8%,   41\u00b0F) [Tue]",
   "last_snapshot": {
     "hours": {
       "07": {
@@ -107,11 +107,11 @@
         "status": "\ud83d\udfe2 good"
       },
       "20": {
-        "iso": "03.30T20:00",
-        "dow": "Mon",
-        "r_mm": 0.4,
-        "pop": 15,
-        "temp_c": 3.5,
+        "iso": "03.31T20:00",
+        "dow": "Tue",
+        "r_mm": 0.0,
+        "pop": 8,
+        "temp_c": 5.1,
         "status": "\ud83d\udfe2 good"
       }
     }
