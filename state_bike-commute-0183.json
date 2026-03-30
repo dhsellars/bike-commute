@@ -1,19 +1,19 @@
 {
-  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.1,  8%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.2,  3%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 18%,   35\u00b0F) [Tue]\n11am \ud83d\udfe2 good   ( 0.0, 20%,   37\u00b0F) [Tue]\n12pm \ud83d\udfe2 good   ( 0.0, 15%,   38\u00b0F) [Tue]\n1pm  \ud83d\udd34 nope   ( 0.0, 95%,   43\u00b0F) [Mon]\n2pm  \ud83d\udd34 nope   ( 0.0,100%,   45\u00b0F) [Mon]\n3pm  \ud83d\udd34 nope   ( 0.5,100%,   43\u00b0F) [Mon]\n4pm  \ud83d\udd34 nope   ( 0.4, 95%,   41\u00b0F) [Mon]\n5pm  \ud83d\udfe1 meh    ( 0.0, 80%,   43\u00b0F) [Mon]\n6pm  \ud83d\udfe1 meh    ( 0.1, 63%,   44\u00b0F) [Mon]\n7pm  \ud83d\udfe2 good   ( 0.0, 23%,   41\u00b0F) [Mon]\n8pm  \ud83d\udfe2 good   ( 0.0, 18%,   40\u00b0F) [Mon]",
+  "last_notification": "\ud83c\udf24\ufe0f Mostly good conditions.\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe2 good   ( 0.0,  8%,   34\u00b0F) [Tue]\n8am  \ud83d\udfe2 good   ( 0.0,  3%,   34\u00b0F) [Tue]\n9am  \ud83d\udfe2 good   ( 0.0,  5%,   34\u00b0F) [Tue]\n10am \ud83d\udfe2 good   ( 0.0, 18%,   36\u00b0F) [Tue]\n11am \ud83d\udfe2 good   ( 0.0, 20%,   37\u00b0F) [Tue]\n12pm \ud83d\udfe2 good   ( 0.0, 15%,   38\u00b0F) [Tue]\n1pm  \ud83d\udfe2 good   ( 0.0, 23%,   40\u00b0F) [Tue]\n2pm  \ud83d\udd34 nope   ( 3.1,100%,   39\u00b0F) [Mon]\n3pm  \ud83d\udd34 nope   ( 0.2,100%,   40\u00b0F) [Mon]\n4pm  \ud83d\udd34 nope   ( 0.9, 95%,   37\u00b0F) [Mon]\n5pm  \ud83d\udfe1 meh    ( 0.1, 80%,   41\u00b0F) [Mon]\n6pm  \ud83d\udfe1 meh    ( 0.0, 63%,   43\u00b0F) [Mon]\n7pm  \ud83d\udfe2 good   ( 0.0, 23%,   39\u00b0F) [Mon]\n8pm  \ud83d\udfe2 good   ( 0.0, 18%,   37\u00b0F) [Mon]",
   "last_snapshot": {
     "hours": {
       "07": {
         "iso": "03.31T07:00",
         "dow": "Tue",
-        "r_mm": 0.1,
+        "r_mm": 0.0,
         "pop": 8,
-        "temp_c": 0.9,
+        "temp_c": 1.0,
         "status": "\ud83d\udfe2 good"
       },
       "08": {
         "iso": "03.31T08:00",
         "dow": "Tue",
-        "r_mm": 0.2,
+        "r_mm": 0.0,
         "pop": 3,
         "temp_c": 0.9,
         "status": "\ud83d\udfe2 good"
@@ -31,7 +31,7 @@
         "dow": "Tue",
         "r_mm": 0.0,
         "pop": 18,
-        "temp_c": 1.8,
+        "temp_c": 2.0,
         "status": "\ud83d\udfe2 good"
       },
       "11": {
@@ -47,55 +47,55 @@
         "dow": "Tue",
         "r_mm": 0.0,
         "pop": 15,
-        "temp_c": 3.5,
+        "temp_c": 3.6,
         "status": "\ud83d\udfe2 good"
       },
       "13": {
-        "iso": "03.30T13:00",
-        "dow": "Mon",
+        "iso": "03.31T13:00",
+        "dow": "Tue",
         "r_mm": 0.0,
-        "pop": 95,
-        "temp_c": 6.2,
-        "status": "\ud83d\udd34 nope"
+        "pop": 23,
+        "temp_c": 4.6,
+        "status": "\ud83d\udfe2 good"
       },
       "14": {
         "iso": "03.30T14:00",
         "dow": "Mon",
-        "r_mm": 0.0,
+        "r_mm": 3.1,
         "pop": 100,
-        "temp_c": 7.1,
+        "temp_c": 3.9,
         "status": "\ud83d\udd34 nope"
       },
       "15": {
         "iso": "03.30T15:00",
         "dow": "Mon",
-        "r_mm": 0.5,
+        "r_mm": 0.2,
         "pop": 100,
-        "temp_c": 6.3,
+        "temp_c": 4.5,
         "status": "\ud83d\udd34 nope"
       },
       "16": {
         "iso": "03.30T16:00",
         "dow": "Mon",
-        "r_mm": 0.4,
+        "r_mm": 0.9,
         "pop": 95,
-        "temp_c": 5.1,
+        "temp_c": 2.9,
         "status": "\ud83d\udd34 nope"
       },
       "17": {
         "iso": "03.30T17:00",
         "dow": "Mon",
-        "r_mm": 0.0,
+        "r_mm": 0.1,
         "pop": 80,
-        "temp_c": 6.1,
+        "temp_c": 4.8,
         "status": "\ud83d\udfe1 meh"
       },
       "18": {
         "iso": "03.30T18:00",
         "dow": "Mon",
-        "r_mm": 0.1,
+        "r_mm": 0.0,
         "pop": 63,
-        "temp_c": 6.4,
+        "temp_c": 5.9,
         "status": "\ud83d\udfe1 meh"
       },
       "19": {
@@ -103,7 +103,7 @@
         "dow": "Mon",
         "r_mm": 0.0,
         "pop": 23,
-        "temp_c": 5.1,
+        "temp_c": 4.0,
         "status": "\ud83d\udfe2 good"
       },
       "20": {
@@ -111,7 +111,7 @@
         "dow": "Mon",
         "r_mm": 0.0,
         "pop": 18,
-        "temp_c": 4.4,
+        "temp_c": 2.9,
         "status": "\ud83d\udfe2 good"
       }
     }
