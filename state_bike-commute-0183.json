@@ -1,85 +1,85 @@
 {
-  "last_notification": "\u2728 All good all day!\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe1 meh    ( 0.0, 55%,   35\u00b0F) [Wed]\n8am  \ud83d\udfe2 good   ( 0.2, 30%,   35\u00b0F) [Wed]\n9am  \ud83d\udfe2 good   ( 0.0, 20%,   37\u00b0F) [Wed]\n10am \ud83d\udfe2 good   ( 0.0,  8%,   38\u00b0F) [Wed]\n11am \ud83d\udfe2 good   ( 0.0, 20%,   40\u00b0F) [Wed]\n12pm \ud83d\udfe2 good   ( 0.0, 25%,   41\u00b0F) [Wed]\n1pm  \ud83d\udfe2 good   ( 0.0, 18%,   42\u00b0F) [Wed]\n2pm  \ud83d\udfe2 good   ( 0.0, 13%,   44\u00b0F) [Wed]\n3pm  \ud83d\udfe2 good   ( 0.0, 13%,   45\u00b0F) [Wed]\n4pm  \ud83d\udfe2 good   ( 0.0,  5%,   47\u00b0F) [Wed]\n5pm  \ud83d\udfe2 good   ( 0.0,  0%,   47\u00b0F) [Wed]\n6pm  \ud83d\udfe2 good   ( 0.0,  0%,   46\u00b0F) [Wed]\n7pm  \ud83d\udfe2 good   ( 0.0,  0%,   45\u00b0F) [Wed]\n8pm  \ud83d\udfe2 good   ( 0.0,  3%,   41\u00b0F) [Tue]",
+  "last_notification": "\u2728 All good all day!\n\nNext occurrences for 07:00\u201320:00:\n7am  \ud83d\udfe1 meh    ( 0.0, 63%,   35\u00b0F) [Wed]\n8am  \ud83d\udfe1 meh    ( 0.3, 58%,   35\u00b0F) [Wed]\n9am  \ud83d\udfe2 good   ( 0.1, 28%,   36\u00b0F) [Wed]\n10am \ud83d\udfe2 good   ( 0.0, 10%,   39\u00b0F) [Wed]\n11am \ud83d\udfe2 good   ( 0.0, 18%,   39\u00b0F) [Wed]\n12pm \ud83d\udfe2 good   ( 0.0, 15%,   41\u00b0F) [Wed]\n1pm  \ud83d\udfe2 good   ( 0.0, 13%,   43\u00b0F) [Wed]\n2pm  \ud83d\udfe2 good   ( 0.0,  8%,   45\u00b0F) [Wed]\n3pm  \ud83d\udfe2 good   ( 0.0,  3%,   47\u00b0F) [Wed]\n4pm  \ud83d\udfe2 good   ( 0.0,  3%,   47\u00b0F) [Wed]\n5pm  \ud83d\udfe2 good   ( 0.0,  0%,   48\u00b0F) [Wed]\n6pm  \ud83d\udfe2 good   ( 0.0,  0%,   47\u00b0F) [Wed]\n7pm  \ud83d\udfe2 good   ( 0.0,  0%,   46\u00b0F) [Wed]\n8pm  \ud83d\udfe2 good   ( 0.0,  0%,   43\u00b0F) [Wed]",
   "last_snapshot": {
     "hours": {
       "07": {
         "iso": "04.01T07:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 55,
-        "temp_c": 1.6,
+        "pop": 63,
+        "temp_c": 1.9,
         "status": "\ud83d\udfe1 meh"
       },
       "08": {
         "iso": "04.01T08:00",
         "dow": "Wed",
-        "r_mm": 0.2,
-        "pop": 30,
-        "temp_c": 1.8,
-        "status": "\ud83d\udfe2 good"
+        "r_mm": 0.3,
+        "pop": 58,
+        "temp_c": 1.7,
+        "status": "\ud83d\udfe1 meh"
       },
       "09": {
         "iso": "04.01T09:00",
         "dow": "Wed",
-        "r_mm": 0.0,
-        "pop": 20,
-        "temp_c": 2.6,
+        "r_mm": 0.1,
+        "pop": 28,
+        "temp_c": 2.2,
         "status": "\ud83d\udfe2 good"
       },
       "10": {
         "iso": "04.01T10:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 8,
-        "temp_c": 3.6,
+        "pop": 10,
+        "temp_c": 3.7,
         "status": "\ud83d\udfe2 good"
       },
       "11": {
         "iso": "04.01T11:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 20,
-        "temp_c": 4.4,
+        "pop": 18,
+        "temp_c": 4.1,
         "status": "\ud83d\udfe2 good"
       },
       "12": {
         "iso": "04.01T12:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 25,
-        "temp_c": 5.2,
+        "pop": 15,
+        "temp_c": 4.8,
         "status": "\ud83d\udfe2 good"
       },
       "13": {
         "iso": "04.01T13:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 18,
-        "temp_c": 5.7,
+        "pop": 13,
+        "temp_c": 6.0,
         "status": "\ud83d\udfe2 good"
       },
       "14": {
         "iso": "04.01T14:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 13,
-        "temp_c": 6.9,
+        "pop": 8,
+        "temp_c": 7.0,
         "status": "\ud83d\udfe2 good"
       },
       "15": {
         "iso": "04.01T15:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 13,
-        "temp_c": 7.4,
+        "pop": 3,
+        "temp_c": 8.1,
         "status": "\ud83d\udfe2 good"
       },
       "16": {
         "iso": "04.01T16:00",
         "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 5,
-        "temp_c": 8.2,
+        "pop": 3,
+        "temp_c": 8.6,
         "status": "\ud83d\udfe2 good"
       },
       "17": {
@@ -87,7 +87,7 @@
         "dow": "Wed",
         "r_mm": 0.0,
         "pop": 0,
-        "temp_c": 8.2,
+        "temp_c": 8.7,
         "status": "\ud83d\udfe2 good"
       },
       "18": {
@@ -95,7 +95,7 @@
         "dow": "Wed",
         "r_mm": 0.0,
         "pop": 0,
-        "temp_c": 8.0,
+        "temp_c": 8.1,
         "status": "\ud83d\udfe2 good"
       },
       "19": {
@@ -103,15 +103,15 @@
         "dow": "Wed",
         "r_mm": 0.0,
         "pop": 0,
-        "temp_c": 7.4,
+        "temp_c": 7.5,
         "status": "\ud83d\udfe2 good"
       },
       "20": {
-        "iso": "03.31T20:00",
-        "dow": "Tue",
+        "iso": "04.01T20:00",
+        "dow": "Wed",
         "r_mm": 0.0,
-        "pop": 3,
-        "temp_c": 5.0,
+        "pop": 0,
+        "temp_c": 6.2,
         "status": "\ud83d\udfe2 good"
       }
     }
